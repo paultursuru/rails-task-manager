@@ -2,13 +2,14 @@
 
 <ul>
   <% @tasks.each do |t| %>
-  <li>
-    <% if t.completed %>
-      <%= "🥑" %>
-    <% else %>
-      <%= "🍞" %>
-    <% end %>
-    <%= link_to t.title, task_path(t) %> <%= link_to "🗑", task_path(t), method: :delete %> </li>
+    <li>
+      <% if t.completed %>
+        <%= "🥑" %>
+      <% else %>
+        <%= "🍞" %>
+      <% end %>
+      <%= link_to t.title, task_path(t) %> <%= link_to "🗑", task_path(t), method: :delete %>
+    </li>
   <% end %>
 </ul>
 
